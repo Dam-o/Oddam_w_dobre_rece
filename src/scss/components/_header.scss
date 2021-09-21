@@ -1,0 +1,19 @@
+@import "../settings/colors";
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+.menu__top {
+    // &--nav {}
+
+    &--link {
+        text-decoration: none;
+        color: $accountControlColor;
+    }
+}
