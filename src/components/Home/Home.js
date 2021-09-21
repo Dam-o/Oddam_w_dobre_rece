@@ -6,7 +6,9 @@ import ThreeColumns from './ThreeColumns';
 export default function Home() {
     return (
         <>
+
             <HeaderNav />
+
             <ThreeColumns />
         </>
     )
