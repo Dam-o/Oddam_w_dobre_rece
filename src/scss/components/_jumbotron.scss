@@ -1,0 +1,60 @@
+@import "../settings/colors";
+
+.jumbotron {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 142px;
+
+
+    &__image {
+        background-image: url("../../assets/Home-Hero-Image.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        z-index: -111;
+        position: absolute;
+        top: 15px;
+        right: 350px;
+    }
+}
+
+.jumbotron__text {
+    width: 600px;
+    margin-top: 50px;
+
+    h1 {
+        color: $textColor;
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: -0.76px;
+        position: relative;
+
+        &::after {
+            content: "";
+            background-image: url("../../assets/Decoration.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 255px;
+            height: 65px;
+            top: 100px;
+            left: 150px;
+        }
+    }
+
+    span::after {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+
+.jumbotron__cta {
+
+    &--btn {
+        text-decoration: none;
+        color: $textColor;
+        font-size: 28px;
+    }
+}
