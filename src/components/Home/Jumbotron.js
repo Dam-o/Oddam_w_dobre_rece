@@ -9,10 +9,10 @@ export default function Jumbotron() {
             </div>
             <div className="jumbotron__text">
                 <h1>Zacznij pomagać!
-                    <span />Oddaj niechciane rzeczy w zaufane ręce</h1>
+                    <span className="break" />Oddaj niechciane rzeczy w zaufane ręce</h1>
                 <div className="jumbotron__cta">
-                    <Link to="/" className="jumbotron__cta--btn">ODDAJ RZECZY</Link>
-                    <Link to="/" className="jumbotron__cta--btn">ZORGANIZUJ ZBIÓRKĘ</Link>
+                    <Link to="/logowanie" className="jumbotron__cta--btn">ODDAJ <span className="break" /> RZECZY</Link>
+                    <Link to="/logowanie" className="jumbotron__cta--btn">ZORGANIZUJ  <span className="break" />ZBIÓRKĘ</Link>
                 </div>
             </div>
         </div >

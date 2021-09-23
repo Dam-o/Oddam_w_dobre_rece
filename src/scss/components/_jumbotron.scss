@@ -13,10 +13,10 @@
         width: 100%;
         max-width: 100%;
         height: 100vh;
-        z-index: -111;
         position: absolute;
         top: 15px;
         right: 350px;
+        z-index: -1111;
     }
 }
 
@@ -27,34 +27,52 @@
     h1 {
         color: $textColor;
         text-align: center;
-        font-size: 30px;
+        font-size: 34px;
         letter-spacing: -0.76px;
         position: relative;
+        font-weight: normal;
 
         &::after {
             content: "";
             background-image: url("../../assets/Decoration.svg");
             background-repeat: no-repeat;
             position: absolute;
-            width: 255px;
-            height: 65px;
-            top: 100px;
-            left: 150px;
+            width: 253px;
+            height: 33px;
+            top: 120px;
+            left: 175px;
         }
     }
 
-    span::after {
-        content: "\a";
-        white-space: pre;
-    }
+
 }
 
 
 .jumbotron__cta {
 
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+
+
     &--btn {
+        width: 290px;
+        height: 90px;
         text-decoration: none;
         color: $textColor;
         font-size: 28px;
+        font-weight: lighter;
+        text-align: center;
+        border: 0.75px solid transparent;
+        padding-top: 3px;
+
+        &:hover {
+            border-color: $textColor;
+        }
     }
+}
+
+.break::after {
+    content: "\a";
+    white-space: pre;
 }

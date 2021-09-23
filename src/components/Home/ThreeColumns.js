@@ -7,6 +7,5 @@ export default function ThreeColumns() {
         }}>
             first element inside container
         </div>
-
     )
 }
