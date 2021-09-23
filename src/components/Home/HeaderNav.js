@@ -16,12 +16,12 @@ export default function HeaderNav() {
             </nav>
             <nav className="menu__bottom">
                 <ul className="menu__bottom--nav">
-                    <Link to="firstInsideContainer"
+                    <Link to="/"
                         smooth={true}
                         duration={500}
                         className="menu__bottom--link">
                         Start</Link>
-                    <Link to="/"
+                    <Link to="simpleSteps"
                         smooth={true}
                         duration={500}
                         className="menu__bottom--link">
