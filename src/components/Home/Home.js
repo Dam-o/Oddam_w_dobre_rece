@@ -4,8 +4,7 @@ import Jumbotron from './Jumbotron';
 import ThreeColumns from './ThreeColumns';
 import SimpleSteps from './SimpleSteps';
 import About from './About';
-import Fundations from './Fundations';
-
+import WhoInfo from './WhoInfo';
 
 export default function Home() {
     return (
@@ -16,7 +15,7 @@ export default function Home() {
                 <ThreeColumns />
                 <SimpleSteps />
                 <About />
-                <Fundations />
+                <WhoInfo />
             </main>
         </>
     )

@@ -16,8 +16,12 @@
     font-size: 28px;
     font-weight: lighter;
     text-align: center;
-    border: 0.75px solid $textColor;
+    border: 0.75px solid transparent;
     padding-top: 3px;
+
+    &:hover {
+        border-color: $textColor;
+    }
 
 }
 
