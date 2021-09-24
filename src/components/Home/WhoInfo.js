@@ -1,22 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Fundation from './Fundation';
 import Local from './Local';
 import Organization from './Organization';
 
-export default function whoInfo() {
+export default function WhoInfo() {
+    const [visible, setVisible] = useState("fundation")
+
+
+    const showPage = (e) => {
+        const newValue = e.target.value;
+        setVisible(newValue);
+    }
+
+
     return (
         <section className="whoInfo" name="whoInfo" >
             <h4>Komu pomagamy?</h4>
             <div className="whoInfo__buttonsContainer">
-                <a>Fundacjom</a>
-                <a>Organizacjom pozarządowym</a>
-                <a>Lokalnym zbiórkom</a>
-            </div>
-            <Fundation />
+                <button href="#" value="fundation" onClick={showPage}>Fundacjom</button>
+                <button href="#" value="organization" onClick={showPage}>Organizacjom pozarządowym</button>
+                <button href="#" value="local" onClick={showPage}>Lokalnym zbiórkom</button>
+            </div >
+            {visible === "fundation" && <Fundation />}
+            {visible === "organization" && <Organization />}
+            {visible === "local" && <Local />}
             <div className="counter">
-                <a>1</a>
-                <a>2</a>
-                <a>3</a>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
             </div>
         </section >
     )

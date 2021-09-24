@@ -3,7 +3,7 @@ import React from 'react'
 export default function Local() {
     return (
         <article className="whoInfo__about" >
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p className="whoInfo__about--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             <ul>
                 <li>
                     <div className="whoInfo__about--title">
