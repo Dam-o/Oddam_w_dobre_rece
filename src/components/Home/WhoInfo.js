@@ -24,11 +24,6 @@ export default function WhoInfo() {
             {visible === "fundation" && <Fundation />}
             {visible === "organization" && <Organization />}
             {visible === "local" && <Local />}
-            <div className="counter">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-            </div>
         </section >
     )
 }
