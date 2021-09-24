@@ -1,0 +1,6 @@
+@import "./placeholder";
+
+@mixin icon($url) {
+    @extend %icon;
+    background-image: url($url);
+}

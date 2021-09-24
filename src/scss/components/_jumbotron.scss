@@ -27,7 +27,7 @@
 
     h1 {
         @extend %header;
-        position: relative;
+
 
         &::after {
             @extend %ornament;
