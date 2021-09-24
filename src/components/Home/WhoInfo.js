@@ -17,9 +17,9 @@ export default function WhoInfo() {
         <section className="whoInfo" name="whoInfo" >
             <h4>Komu pomagamy?</h4>
             <div className="whoInfo__buttonsContainer">
-                <button href="#" value="fundation" onClick={showPage}>Fundacjom</button>
-                <button href="#" value="organization" onClick={showPage}>Organizacjom pozarządowym</button>
-                <button href="#" value="local" onClick={showPage}>Lokalnym zbiórkom</button>
+                <button value="fundation" onClick={showPage}>Fundacjom</button>
+                <button value="organization" onClick={showPage}>Organizacjom pozarządowym</button>
+                <button value="local" onClick={showPage}>Lokalnym zbiórkom</button>
             </div >
             {visible === "fundation" && <Fundation />}
             {visible === "organization" && <Organization />}

@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import Reac from 'react'
 
 export default function Local() {
-
-    const [counter, setCounter] = useState(false);
-
-    useEffect(() => {
-        const listItem = document.getElementsByClassName("listItem");
-        let state = false;
-        if (listItem.length >= 3) {
-            state = !state;
-        }
-        setCounter(state);
-
-    }, []);
     return (
-        <article className="whoInfo__about" >
+        <article className="whoInfo__about" style={{ marginBottom: "50px" }}>
             <p className="whoInfo__about--description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
             <ul>
                 <li className="listItem">
@@ -39,12 +27,6 @@ export default function Local() {
                     <p>Mi, quis, hendrerit, dolor</p>
                 </li>
             </ul>
-            {counter &&
-                <div className="counter">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                </div>}
         </article>
     )
 }
