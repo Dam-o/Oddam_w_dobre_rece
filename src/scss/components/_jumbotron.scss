@@ -40,7 +40,8 @@
 
 
     &--btn {
-        @extend %btn;
+        width: 280px;
+        @include button(15px, 0);
     }
 }
 

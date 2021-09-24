@@ -5,6 +5,8 @@ import ThreeColumns from './ThreeColumns';
 import SimpleSteps from './SimpleSteps';
 import About from './About';
 import WhoInfo from './WhoInfo';
+import Form from './Form';
+
 
 export default function Home() {
     return (
@@ -16,6 +18,7 @@ export default function Home() {
                 <SimpleSteps />
                 <About />
                 <WhoInfo />
+                <Form />
             </main>
         </>
     )

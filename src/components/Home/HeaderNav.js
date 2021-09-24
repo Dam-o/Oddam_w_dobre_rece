@@ -36,7 +36,7 @@ export default function HeaderNav() {
                         duration={500}
                         className="menu__bottom--link">
                         Fundacja i organizacje</Link>
-                    <Link to="/"
+                    <Link to="contact"
                         smooth={true}
                         duration={500}
                         className="menu__bottom--link">

@@ -9,15 +9,12 @@
 
 
 %btn {
-    width: 290px;
-    height: 90px;
     text-decoration: none;
     color: $textColor;
     font-size: 28px;
     font-weight: lighter;
     text-align: center;
     border: 0.75px solid transparent;
-    padding-top: 3px;
 
     &:hover {
         border-color: $textColor;
@@ -38,4 +35,20 @@
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+%input {
+    border: none;
+    border-bottom: 1.75px solid rgba($textColor, 0.25);
+
+    &:focus {
+        outline: none;
+        box-shadow: inset 70px 66px 42px -90px rgba(60, 60, 60, 0.25);
+    }
+
+    &::placeholder {
+        color: #3C3C3C26;
+        font-size: 18px;
+    }
+
 }

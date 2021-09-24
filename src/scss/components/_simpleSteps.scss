@@ -12,7 +12,7 @@
     align-items: center;
 
     &--cta {
-        @extend %btn;
+        @include button(15px, 85px);
         margin-top: 25px;
     }
 
