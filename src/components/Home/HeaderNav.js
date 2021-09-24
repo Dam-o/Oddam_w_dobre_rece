@@ -26,7 +26,7 @@ export default function HeaderNav() {
                         duration={500}
                         className="menu__bottom--link">
                         O co chodzi?</Link>
-                    <Link to="/"
+                    <Link to="about"
                         smooth={true}
                         duration={500}
                         className="menu__bottom--link">

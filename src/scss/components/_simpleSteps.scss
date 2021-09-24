@@ -17,14 +17,7 @@
     }
 
     h4 {
-        @extend %header;
-
-
-        &::after {
-            @extend %ornament;
-            top: 70px;
-            left: 60px;
-        }
+        @include header(70px, 60px);
     }
 }
 
@@ -93,19 +86,19 @@
 
 
 .shirtIcon {
-    @include icon("../../assets/Icon-1.svg");
+    @include icon("../../assets/Icon-1.svg", 83px, 83px);
 
 }
 
 .bagIcon {
-    @include icon("../../assets/Icon-2.svg");
+    @include icon("../../assets/Icon-2.svg", 83px, 83px);
 }
 
 .magnificerIcon {
-    @include icon("../../assets/Icon-3.svg");
+    @include icon("../../assets/Icon-3.svg", 83px, 83px);
 
 }
 
 .arrowsIcon {
-    @include icon("../../assets/Icon-4.svg");
+    @include icon("../../assets/Icon-4.svg", 83px, 83px);
 }

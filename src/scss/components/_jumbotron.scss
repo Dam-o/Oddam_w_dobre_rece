@@ -1,5 +1,6 @@
 @import "../settings/colors";
 @import "../settings/placeholder";
+@import "../settings/mixins";
 
 .jumbotron {
     display: flex;
@@ -26,14 +27,7 @@
     margin-top: 50px;
 
     h1 {
-        @extend %header;
-
-
-        &::after {
-            @extend %ornament;
-            top: 120px;
-            left: 175px;
-        }
+        @include header(120px, 175px);
     }
 }
 
