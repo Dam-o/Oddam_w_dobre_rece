@@ -31,7 +31,7 @@ export default function HeaderNav() {
                         duration={500}
                         className="menu__bottom--link">
                         O nas</Link>
-                    <Link to="/"
+                    <Link to="whoInfo"
                         smooth={true}
                         duration={500}
                         className="menu__bottom--link">
