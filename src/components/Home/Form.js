@@ -1,27 +1,131 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from './Footer'
+import "../../API/post";
+import "../../API/post";
+import { sendMessage } from '../../API/post';
 
 export default function Form() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        text: ""
+    });
+
+    const dataHandler = (e) => {
+
+        const { name, value } = e.target;
+        setFormData(prev => {
+            return {
+                ...prev,
+                [name]: value,
+            }
+        })
+    };
+
+    const [nameError, setNameError] = useState({});
+    const [emailError, setEmailError] = useState({});
+    const [textError, setTextError] = useState({});
+    const [success, setSuccess] = useState(false);
+
+    const validate = () => {
+        const nameError = {};
+        const emailError = {};
+        const textError = {};
+        let isValid = true;
+        const reg = /^\S+@\S+\.\S+$/;
+
+        if (formData.name.length === 0) {
+            nameError.shortName = "Podane imię jest nieprawidłowe!"
+            isValid = false;
+        }
+
+        if (formData.name.indexOf(' ') !== -1) {
+            nameError.wrongName = "Podane imię jest nieprawidłowe!"
+            isValid = false;
+        }
+
+        if (!reg.test(formData.email.trim())) {
+            emailError.wrongEmail = "Podany email jest nieprawidłowy!";
+            isValid = false;
+        }
+
+        if (formData.text.length < 120) {
+            textError.wrongText = "Wiadomość musi mieć conajmniej 120 znaków!"
+            isValid = false;
+        }
+
+        setNameError(nameError);
+        setEmailError(emailError);
+        setTextError(textError);
+        return isValid;
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const isValid = validate();
+        let message = {
+            name: formData.name,
+            email: formData.email,
+            text: formData.text
+        };
+        if (isValid) {
+            sendMessage(message);
+            setSuccess(!success);
+        } else {
+            console.log("error")
+        }
+    };
+
+
+
+
     return (
-        <div class="container">
+        <div className="container">
             <section className="contact" name="contact">
-                <form className="contact__form">
+                <form className="contact__form" >
                     <h4>Skontaktuj się z nami</h4>
+                    {success &&
+                        <span className="success">
+                            Wiadomość została wysłana!<span className="break" />
+                            Wkrótce się skontatkujemy!</span>}
                     <fieldset className="contact__form--name">
                         <div>
-                            <label for="name">Wpisz swoje imię</label>
-                            <input name="name" type="text" placeholder="Krzysztof"></input>
+                            <label htmlFor="name">Wpisz swoje imię</label>
+                            <input name="name" type="text" placeholder="Krzysztof" onChange={dataHandler}  ></input>
+                            {Object.keys(nameError).map((key) => {
+                                return (
+                                    <span
+                                        key="nameErorr"
+                                        className="error">{nameError[key]}</span>
+                                )
+                            })}
                         </div>
                         <div>
-                            <label for="email">Wpisz swój email</label>
-                            <input name="email" type="email" placeholder="abc@xyz.pl"></input>
+                            <label htmlFor="email">Wpisz swój email</label>
+                            <input name="email" type="email" placeholder="abc@xyz.pl" onChange={dataHandler}></input>
+                            {Object.keys(emailError).map((key) => {
+                                return (
+                                    <span
+                                        key="emailError"
+                                        className="error"> {emailError[key]}</span>
+                                )
+                            })}
                         </div>
                     </fieldset>
                     <fieldset className="contact__form--text">
-                        <label for="message">Wpisz swoją wiadomość</label>
-                        <textarea name="message" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."></textarea>
+                        <label htmlFor="text">Wpisz swoją wiadomość</label>
+                        <textarea onChange={dataHandler} name="text"
+                            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."></textarea>
+                        {
+                            Object.keys(textError).map((key) => {
+                                return (
+                                    <span
+                                        key="textError"
+                                        className="error">{textError[key]}</span>
+                                )
+                            })}
                     </fieldset>
-                    <button type="submit" className="contact__form--button">Wyślij</button>
+                    <button className="contact__form--button" onClick={onSubmit}>Wyślij</button>
                 </form>
             </section>
             <Footer />

@@ -43,7 +43,7 @@
         @extend %input;
         width: 250px;
         background-color: transparent;
-
+        position: relative;
     }
 
     &__form {
@@ -61,13 +61,16 @@
 
         &--name {
             margin-top: 60px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
 
+
             div {
                 display: flex;
                 flex-direction: column;
+                height: 80px;
             }
         }
 
@@ -92,8 +95,17 @@
             align-self: flex-end;
         }
     }
+}
 
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}
 
-
-
+.success {
+    color: green;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 25px;
 }

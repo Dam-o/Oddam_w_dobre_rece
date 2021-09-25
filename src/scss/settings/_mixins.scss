@@ -19,6 +19,5 @@
 
 @mixin button($x, $y) {
     @extend %btn;
-
     padding: $x $y;
 }
