@@ -4,11 +4,12 @@ import "../../API/post";
 import "../../API/post";
 import { sendMessage } from '../../API/post';
 
+
 export default function Form() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        text: ""
+        msg: ""
     });
 
     const dataHandler = (e) => {
@@ -49,7 +50,7 @@ export default function Form() {
             isValid = false;
         }
 
-        if (formData.text.length < 120) {
+        if (formData.msg.length < 120) {
             textError.wrongText = "Wiadomość musi mieć conajmniej 120 znaków!"
             isValid = false;
         }
@@ -63,21 +64,16 @@ export default function Form() {
     const onSubmit = (e) => {
         e.preventDefault();
         const isValid = validate();
-        let message = {
+        const message = {
             name: formData.name,
             email: formData.email,
-            text: formData.text
+            msg: formData.msg
         };
         if (isValid) {
             sendMessage(message);
             setSuccess(!success);
-        } else {
-            console.log("error")
         }
     };
-
-
-
 
     return (
         <div className="container">
@@ -114,7 +110,7 @@ export default function Form() {
                     </fieldset>
                     <fieldset className="contact__form--text">
                         <label htmlFor="text">Wpisz swoją wiadomość</label>
-                        <textarea onChange={dataHandler} name="text"
+                        <textarea onChange={dataHandler} name="msg"
                             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."></textarea>
                         {
                             Object.keys(textError).map((key) => {

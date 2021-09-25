@@ -42,7 +42,7 @@
     input {
         @extend %input;
         width: 250px;
-        background-color: transparent;
+
         position: relative;
     }
 
@@ -53,11 +53,6 @@
         margin-right: 200px;
         margin-bottom: 75px;
         width: 600px;
-
-        fieldset {
-            border: none;
-        }
-
 
         &--name {
             margin-top: 60px;
@@ -90,7 +85,6 @@
         &--button {
             @include button(5px, 20px);
             margin-right: 14px;
-            background-color: inherit;
             font-size: 18px;
             align-self: flex-end;
         }
