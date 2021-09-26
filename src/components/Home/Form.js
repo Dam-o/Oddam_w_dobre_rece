@@ -13,7 +13,6 @@ export default function Form() {
     });
 
     const dataHandler = (e) => {
-
         const { name, value } = e.target;
         setFormData(prev => {
             return {
@@ -76,55 +75,60 @@ export default function Form() {
     };
 
     return (
-        <div className="container">
+        <div className="background">
             <section className="contact" name="contact">
                 <form className="contact__form" >
                     <h4>Skontaktuj się z nami</h4>
-                    {success &&
-                        <span className="success">
-                            Wiadomość została wysłana!<span className="break" />
-                            Wkrótce się skontatkujemy!</span>}
+                    <span className="success">
+                        {success &&
+                            <p>  Wiadomość została wysłana!<span className="break" />
+                                Wkrótce się skontatkujemy!</p>}
+                    </span>
                     <fieldset className="contact__form--name">
                         <div>
                             <label htmlFor="name">Wpisz swoje imię</label>
                             <input name="name" type="text" placeholder="Krzysztof" onChange={dataHandler}  ></input>
-                            {Object.keys(nameError).map((key) => {
-                                return (
-                                    <span
-                                        key="nameErorr"
-                                        className="error">{nameError[key]}</span>
-                                )
-                            })}
+                            <p className="error">
+                                {Object.keys(nameError).map((key) => {
+                                    return (
+                                        <span
+                                            key="nameErorr"
+                                        >{nameError[key]}</span>
+                                    )
+                                })}</p>
                         </div>
                         <div>
                             <label htmlFor="email">Wpisz swój email</label>
                             <input name="email" type="email" placeholder="abc@xyz.pl" onChange={dataHandler}></input>
-                            {Object.keys(emailError).map((key) => {
-                                return (
-                                    <span
-                                        key="emailError"
-                                        className="error"> {emailError[key]}</span>
-                                )
-                            })}
+                            <p className="error">
+                                {Object.keys(emailError).map((key) => {
+                                    return (
+                                        <span
+                                            key="emailError"
+                                        > {emailError[key]}</span>
+                                    )
+                                })}
+                            </p>
                         </div>
                     </fieldset>
                     <fieldset className="contact__form--text">
                         <label htmlFor="text">Wpisz swoją wiadomość</label>
                         <textarea onChange={dataHandler} name="msg"
                             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."></textarea>
-                        {
+                        <p className="error">     {
                             Object.keys(textError).map((key) => {
                                 return (
                                     <span
                                         key="textError"
-                                        className="error">{textError[key]}</span>
+                                    >{textError[key]}</span>
                                 )
-                            })}
+                            })}</p>
+
                     </fieldset>
                     <button className="contact__form--button" onClick={onSubmit}>Wyślij</button>
                 </form>
             </section>
             <Footer />
-        </div>
+        </div >
     )
 }

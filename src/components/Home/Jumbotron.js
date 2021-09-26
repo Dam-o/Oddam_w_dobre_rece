@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Jumbotron() {
     return (
-        <div className="jumbotron">
+        <div className="jumbotron container">
             <div>
                 <div className="jumbotron__image" />
             </div>

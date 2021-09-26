@@ -3,7 +3,7 @@
 @import "../settings/mixins";
 
 
-.container {
+.background {
     position: relative;
 
     &::before {
@@ -32,6 +32,7 @@
 
     display: flex;
     justify-content: flex-end;
+    height: 700px;
 
     label {
         color: $textColor;
@@ -42,21 +43,18 @@
     input {
         @extend %input;
         width: 250px;
-
         position: relative;
     }
 
     &__form {
         display: flex;
         flex-direction: column;
-
         margin-right: 200px;
         margin-bottom: 75px;
         width: 600px;
 
         &--name {
-            margin-top: 60px;
-
+            margin-top: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -65,7 +63,7 @@
             div {
                 display: flex;
                 flex-direction: column;
-                height: 80px;
+
             }
         }
 
@@ -95,6 +93,7 @@
     color: red;
     font-size: 12px;
     margin-top: 10px;
+    height: 20px;
 }
 
 .success {
@@ -102,4 +101,5 @@
     font-size: 14px;
     text-align: center;
     padding-top: 25px;
+    height: 80px;
 }

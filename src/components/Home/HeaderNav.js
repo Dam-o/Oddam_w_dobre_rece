@@ -16,15 +16,20 @@ export default function HeaderNav() {
                 duration: 500
             })
         }, [200])
-    }
-    const pageCheck = (element) => {
-        backPage();
-        scroll(element);
-    }
+    };
 
+    const loginPath = "http://localhost:3000/logowanie";
+    const registerPath = "http://localhost:3000/rejestracja";
+
+    const pageCheck = (element) => {
+        if (window.location.href === loginPath || registerPath) {
+            backPage();
+            scroll(element);
+        }
+    };
 
     return (
-        <header>
+        <header className="container">
             <nav className="menu__top">
                 <ul className="menu__top--account">
                     <NavLink to="/logowanie" className="menu__top--link" >Zaloguj</NavLink>

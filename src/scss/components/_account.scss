@@ -3,7 +3,7 @@
 @import "../settings/placeholder";
 @import "../settings/mixins";
 
-.login {
+.accountControl {
     position: absolute;
     top: 50%;
     right: 50%;
@@ -19,7 +19,7 @@
     }
 
     form {
-        height: 250px;
+        height: 300px;
 
         background-color: $altBackgroundColor;
         display: flex;
@@ -32,6 +32,7 @@
         fieldset {
             display: flex;
             flex-direction: column;
+            height: 80px;
         }
 
         input {
@@ -55,7 +56,6 @@
         &--btn {
             @include button(8px, 10px);
             font-size: 20px;
-
 
         }
     }

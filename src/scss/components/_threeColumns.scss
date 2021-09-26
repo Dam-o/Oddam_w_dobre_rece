@@ -5,14 +5,18 @@
     background-color: $backgroundColor;
     background-image: url("../../assets/3_Columns_Background.png");
     background-size: cover;
-    margin-top: 270px;
-    display: flex;
-    justify-content: space-around;
+
+    div {
+        margin-left: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
 
 }
 
 .info__article {
-    width: 330px;
+    width: 270px;
     margin-top: 45px;
     margin-bottom: 65px;
     text-align: center;
