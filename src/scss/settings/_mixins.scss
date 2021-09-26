@@ -1,0 +1,23 @@
+@import "./placeholder";
+
+@mixin icon($url, $x, $y) {
+    @extend %icon;
+    width: $x;
+    height: $y;
+    background-image: url($url);
+}
+
+@mixin header($x, $y) {
+    @extend %header;
+
+    &::after {
+        @extend %ornament;
+        top: $x;
+        left: $y;
+    }
+}
+
+@mixin button($x, $y) {
+    @extend %btn;
+    padding: $x $y;
+}

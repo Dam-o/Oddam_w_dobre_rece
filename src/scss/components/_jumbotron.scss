@@ -1,0 +1,50 @@
+@import "../settings/colors";
+@import "../settings/placeholder";
+@import "../settings/mixins";
+
+.jumbotron {
+    display: flex;
+    justify-content: space-between;
+    height: 84vh;
+
+
+    &__image {
+        background-image: url("../../assets/Home-Hero-Image.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 15px;
+        right: 350px;
+        z-index: -1111;
+    }
+}
+
+.jumbotron__text {
+    width: 600px;
+    margin-top: 140px;
+
+    h1 {
+        @include header(120px, 175px);
+    }
+}
+
+
+.jumbotron__cta {
+
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+
+
+    &--btn {
+        width: 280px;
+        @include button(15px, 0);
+    }
+}
+
+.break::after {
+    content: "\a";
+    white-space: pre;
+}

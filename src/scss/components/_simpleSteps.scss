@@ -1,0 +1,104 @@
+@import "../settings/colors";
+@import "../settings/placeholder";
+@import "../settings/mixins";
+
+
+.simpleSteps {
+    margin-top: 35px;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    &--cta {
+        @include button(15px, 85px);
+        margin-top: 25px;
+    }
+
+    h4 {
+        @include header(70px, 60px);
+    }
+}
+
+.simpleSteps {
+    h5 {
+        margin-top: 0px;
+    }
+
+    h5,
+    p {
+        color: $textColor;
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 16px;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 0.75px;
+            width: 70px;
+            background-color: $textColor;
+            opacity: 0.5;
+            position: absolute;
+            top: -15px;
+            left: 35px;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        background-color: $altBackgroundColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 75px;
+
+        &--article {
+            width: 140px;
+            text-align: center;
+            margin-bottom: 55px;
+            margin-top: 55px;
+        }
+    }
+}
+
+.simpleSteps__container--article {
+    &:nth-of-type(3) {
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    &:last-of-type {
+        width: 180px;
+
+        p {
+            &::after {
+                left: 55px;
+            }
+        }
+    }
+}
+
+
+.shirtIcon {
+    @include icon("../../assets/Icon-1.svg", 83px, 83px);
+
+}
+
+.bagIcon {
+    @include icon("../../assets/Icon-2.svg", 83px, 83px);
+}
+
+.magnificerIcon {
+    @include icon("../../assets/Icon-3.svg", 83px, 83px);
+
+}
+
+.arrowsIcon {
+    @include icon("../../assets/Icon-4.svg", 83px, 83px);
+}

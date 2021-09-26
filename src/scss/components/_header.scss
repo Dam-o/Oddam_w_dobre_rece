@@ -1,0 +1,60 @@
+@import "../settings/colors";
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 17px;
+
+}
+
+.menu__top {
+    &--account {
+        margin-bottom: 20px;
+    }
+
+    &--link {
+        text-decoration: none;
+        color: $accountControlColor;
+        font-size: 13px;
+        line-height: 18px;
+        border: 1px solid transparent;
+        padding: 9px 10px;
+
+        &:first-of-type {
+            margin-right: 35px
+        }
+
+        &:hover {
+            border-color: $backgroundColor;
+        }
+    }
+}
+
+.menu__bottom {
+
+    &--link {
+        color: $textColor;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 9px 20px;
+        border: 1px solid transparent;
+        cursor: pointer;
+
+        &:last-of-type {
+            padding-right: 0;
+
+            &:hover {
+                margin-right: -20px;
+                padding-right: 20px;
+            }
+        }
+
+        &:hover {
+            border-color: $textColor;
+        }
+    }
+}

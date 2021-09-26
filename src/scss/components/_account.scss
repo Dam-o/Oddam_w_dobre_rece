@@ -1,0 +1,80 @@
+@import "../settings/colors";
+@import "../settings/fonts";
+@import "../settings/placeholder";
+@import "../settings/mixins";
+
+
+
+.accountControl {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    margin-top: 50px;
+    width: 400px;
+
+    h1 {
+        @include header(90px, 75px);
+        font-size: 45px;
+        color: $accountControlColor;
+        margin-bottom: 80px;
+    }
+
+    form {
+        height: 300px;
+
+        background-color: $altBackgroundColor;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 25px;
+        color: $accountControlColor;
+        justify-content: space-around;
+        align-items: stretch;
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            height: 80px;
+        }
+
+        input {
+            @extend %input;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+
+    &__buttons {
+
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+
+        &--btn {
+            @include button(8px, 10px);
+            font-size: 20px;
+
+        }
+    }
+}
+
+.logout {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        @include header(150px, 155px);
+    }
+
+
+    a {
+        align-self: center;
+        width: 30%;
+    }
+}

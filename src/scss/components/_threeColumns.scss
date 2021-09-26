@@ -1,0 +1,40 @@
+@import "../settings/colors";
+
+
+.info {
+    background-color: $backgroundColor;
+    background-image: url("../../assets/3_Columns_Background.png");
+    background-size: cover;
+
+    div {
+        margin-left: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
+
+.info__article {
+    width: 270px;
+    margin-top: 45px;
+    margin-bottom: 65px;
+    text-align: center;
+
+    h2 {
+        font-size: 70px;
+        color: $altTextColor;
+        font-weight: lighter;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-size: 18px;
+        margin-top: 0;
+        color: $textColor;
+    }
+
+    p {
+        color: $textColor;
+    }
+}

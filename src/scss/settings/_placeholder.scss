@@ -1,0 +1,56 @@
+%ornament {
+    content: "";
+    background-image: url("../../assets/Decoration.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 253px;
+    height: 33px;
+}
+
+
+%btn {
+    text-decoration: none;
+    color: $textColor;
+    font-size: 28px;
+    font-weight: lighter;
+    text-align: center;
+    border: 0.75px solid transparent;
+    background-color: inherit;
+
+    &:hover {
+        border-color: $textColor;
+    }
+
+}
+
+%header {
+    color: $textColor;
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: -0.76px;
+    font-weight: normal;
+    position: relative;
+}
+
+%icon {
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+%input {
+    border: none;
+    border-bottom: 1.75px solid rgba($textColor, 0.25);
+    background-color: transparent;
+
+    &:focus {
+        outline: none;
+        box-shadow: inset 70px 66px 42px -90px rgba(60, 60, 60, 0.25);
+    }
+
+    &::placeholder {
+        color: #3C3C3C26;
+        font-size: 18px;
+    }
+
+}
