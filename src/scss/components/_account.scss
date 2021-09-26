@@ -3,6 +3,8 @@
 @import "../settings/placeholder";
 @import "../settings/mixins";
 
+
+
 .accountControl {
     position: absolute;
     top: 50%;
@@ -58,5 +60,21 @@
             font-size: 20px;
 
         }
+    }
+}
+
+.logout {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        @include header(150px, 155px);
+    }
+
+
+    a {
+        align-self: center;
+        width: 30%;
     }
 }
